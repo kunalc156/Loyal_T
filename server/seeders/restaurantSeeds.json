@@ -1,0 +1,48 @@
+[{
+  "name" : "3 brothersss",
+  "email" : "abc@g.com",
+  "password" : "11111",
+  "passcode" : "1234",
+  "logoUrl" : "https://img.icons8.com/doodle/48/000000/link--v1.png",
+  "maxPoint" : 1000,
+  "offerOne" : "50%off",
+  "offerTwo" : "2nd free",
+  "activeTemplate" : 1,
+  "barcode" : "1234567890"
+},
+{
+  "name" : "Axil Restaurant",
+  "email" : "abcd@g.com",
+  "password" : "11111",
+  "passcode" : "1111",
+  "logoUrl" : "https://img.icons8.com/doodle/48/000000/link--v1.png",
+  "maxPoint" : 1000,
+  "offerOne" : "50%off",
+  "offerTwo" : "2nd free",
+  "activeTemplate" : 2,
+  "barcode" : "DummyCode"
+},
+{
+  "name" : "Delhi Rocks",
+  "email" : "delhirocks@test.com",
+  "password" : "11111",
+  "passcode" : "12345"
+},
+{
+  "name" : "Nobu",
+  "email" : "nobu@test.com",
+  "password" : "11111",
+  "passcode" : "12345"
+},
+{
+  "name" : "Piccollo cafe",
+  "email" : "picollo@test.com",
+  "password" : "11111",
+  "passcode" : "12345"
+},
+{
+  "name" : "Operator 25",
+  "email" : "operator@test.com",
+  "password" : "11111",
+  "passcode" : "12345"
+}]
