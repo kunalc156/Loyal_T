@@ -22,9 +22,15 @@ app.use(express.json()); // treats the POST and PUT request
 app.use('/images', express.static(path.join(__dirname, '../client/images')));
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../client/build')));
-}
+  // Exprees will serve up production assets
+  app.use(express.static('client/build'));
 
+  // Express serve up index.html file if it doesn't recognize route
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 
 db.once('open', () => {

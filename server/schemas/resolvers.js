@@ -6,12 +6,12 @@ const ObjectId = require('mongodb').ObjectId;
 const resolvers = {
   Query: {
     visits: async (parent, args, context) => {
-      //if (context.user) {
-      //  const user = Profile.findOne({ _id: context.user._id });
+      if (context.user) {
+        const user = Profile.findOne({ _id: context.user._id });
         let arr = []; 
         let checkinHistory = [];
         //find the visit history of the person
-        const visitHistories = await VisitHistory.find({user: ObjectId("610f8160b4ff8b77813d6003")}).populate('restaurant');
+        const visitHistories = await VisitHistory.find({user: ObjectId(context.user._id)}).populate('restaurant');
     
         for(var history of visitHistories) {
             arr.push({
@@ -28,8 +28,8 @@ const resolvers = {
         console.log(arr);
         return arr;
 
-     // }
-      ////throw new AuthenticationError('You need to be logged in!');
+      }
+      throw new AuthenticationError('You need to be logged in!');
     },
 
     restaurants: async () => {

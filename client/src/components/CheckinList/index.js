@@ -17,7 +17,7 @@ const CheckinList = ({ checkin }) => {
   if( checkin) {
         checkin.map((entry) => {
             const {restaurantName, restaurantId, maxPoint, offerOne, offerTwo, activeTemplate, visitDate}  = entry;
-            const formattedDate = moment.unix(visitDate/1000).format("DD/MM/YYYY")
+            const formattedDate = moment.unix(visitDate/1000).format("DD/MM/YYYY hh:mm:ss a")
 
             const entryExists = data.some(oldEntry => oldEntry.restaurantId === restaurantId);
             if(entryExists) {
@@ -31,6 +31,8 @@ const CheckinList = ({ checkin }) => {
                                 'activeTemplate': activeTemplate, 'visitDate': [formattedDate]  });
             }
         });
+
+        console.log(data);
    }
   
 
