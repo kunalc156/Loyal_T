@@ -20,7 +20,6 @@ app.use(express.urlencoded({ extended: false })); //treats form data as
 app.use(express.json()); // treats the POST and PUT request
 
 app.use('/images', express.static(path.join(__dirname, '../client/images')));
-
 if (process.env.NODE_ENV === 'production') {
   // Exprees will serve up production assets
   app.use(express.static('client/build'));
@@ -28,7 +27,7 @@ if (process.env.NODE_ENV === 'production') {
   // Express serve up index.html file if it doesn't recognize route
   const path = require('path');
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname + '/app/client/build/index.html'));
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
 
